@@ -12,7 +12,7 @@
         <div class="col-span-full">
           <label for="about" class="block text-2xl font-medium leading-6 text-gray-900">Body</label>
           <div class="mt-2">
-            <textarea id="about" name="body" placeholder="Add new note idea!!" rows="3" class="block w-1/2 h-40 rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-500 sm:text-sm sm:leading-6"></textarea>
+            <textarea id="about" name="body" placeholder="Add new note idea!!" rows="3" class="block w-1/2 h-40 rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" required></textarea>
           </div>
         </div>
       </div>

@@ -15,9 +15,7 @@
                 </li>
           <?php endforeach;?>
       </div>
-      <div class=" bg-sky-400 w-full h-15 rounded-md shadow-md shadow-gray-600 hover:bg-sky-300 text-center">
-        <a href="/notes/create" >Create New Note</a>
-      </div>
+      
   </div>
 </main>
  
