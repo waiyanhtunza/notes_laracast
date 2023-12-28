@@ -7,7 +7,7 @@ $db = new Database($config['database']);
 
 $heading = 'My Notes';
 
-$notes = $db->query('select * from notes')->fetchAll();
+$notes = $db->query('select * from notes')->get(); 
 
 // dd($notes);
 

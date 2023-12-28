@@ -13,15 +13,8 @@ $note = $db->query('select * from notes where id = :id', [
 
 // dd($notes);
 
-$currentId = 2;
-$forbidden = 403;
+$currentId = 3;
 
-
-if ($note['user_id'] != $currentId){
-    abort(Response::FORBIDDEN);
-}
-
-
-
+authorize($note['user_id'] === $currentId);
 
 require('views/note.view.php'); 
