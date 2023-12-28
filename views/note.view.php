@@ -6,6 +6,10 @@
      
 
       <div>
+
+          <p class="my-4">
+            <a href="/notes" class="underline text-sky-600 text-lg font-bold" > <= ... go back</a>
+          </p>
           <p>
             <?= $note['body'] ?>
           </p>
