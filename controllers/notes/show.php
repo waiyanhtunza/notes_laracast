@@ -17,4 +17,4 @@ $currentId = 3;
 
 authorize($note['user_id'] === $currentId);
 
-require('views/note.view.php'); 
+require('views/notes/show.view.php'); 
