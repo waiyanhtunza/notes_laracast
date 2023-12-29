@@ -3,8 +3,11 @@
 const BASE_PATCH = __DIR__ . "/../";
 
 require BASE_PATCH . "functions.php";
-require base_path("Database.php") ;
-require base_path("Response.php");
+
+spl_autoload_register(function ($class) {
+    require base_path("Core/{$class}.php");
+});
+
 require base_path("router.php");
 //connect to database;
 
