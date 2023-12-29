@@ -1,17 +1,13 @@
 <?php
-require "Validator.php";
+require base_path("Validator.php");
 
-$config = require "config.php";
+$config = require base_path("config.php");
 $db = new Database($config['database']);
 
-
-$heading = 'Create New Note';
-
+$error = [];
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-    $error = [];
-
-    if(!Validator::string($_POST['body'],1,1000)){
+    if(! Validator::string($_POST['body'],1,1000)){
             $error['body'] = 'A body is required';
     }
     
@@ -21,11 +17,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             'user_id'=> 3,
         ]);
     }
-   
-    
     
 }
 
-
-
-require "views/notes/create.view.php";
+view('notes/create.view.php',[
+    'heading'=> 'Create New Note',
+    'error'=> $error ,
+    
+]) ;
