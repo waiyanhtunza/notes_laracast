@@ -2,13 +2,15 @@
 
 const BASE_PATCH = __DIR__ . "/../";
 
-require BASE_PATCH . "functions.php";
+require BASE_PATCH . "Core/functions.php";
 
 spl_autoload_register(function ($class) {
-    require base_path("Core/{$class}.php");
+
+    $class = str_replace("\\",DIRECTORY_SEPARATOR, $class);
+    require base_path("{$class}.php");
 });
 
-require base_path("router.php");
+require base_path("Core/router.php");
 //connect to database;
 
 
